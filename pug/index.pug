@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title I 
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet" href="vendor/bootstrap.min.css")
+  body
+    .vue
+      textarea.form-control(readonly v-model="output")
+      textarea.form-control(placeholder="Masukkan teks di sini..." v-model="input")
+    script(src="vendor/jquery.min.js")
+    script(src="vendor/vue.min.js")
+    script
+      include:uglify-js:coffee-script(bare=true) index.coffee
